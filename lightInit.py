@@ -20,10 +20,12 @@ class Light:
         #     GPIO.setup(pin, GPIO.IN)
 
     def lightOutputs(self):
+        for pin in self.outputs:
+            GPIO.output(pin, GPIO.LOW)
         print("Lighting outputs...")
         for pin in self.outputs:
             print(f"Turning on output on pin {pin}")
-            GPIO.output(pin, GPIO.HIGH)
+            GPIO.output(pin, GPIO.LOW)
             time.sleep(5)
 
     def checkAllInputs(self) -> bool:
