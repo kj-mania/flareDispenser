@@ -27,6 +27,8 @@ if __name__ == "__main__":
         Light.main()
     except KeyboardInterrupt:
         print("Program interrupted by user.")
+    finally:
+        GPIO.cleanup()
 
 
 
