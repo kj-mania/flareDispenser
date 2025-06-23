@@ -1,7 +1,6 @@
 import RPi.GPIO as GPIO
 
 class Light:
-
     def __init__(self):
         self.outputs = [20, 21]
         # inputs = []
@@ -24,7 +23,10 @@ class Light:
         light.setOutputs()
     
 if __name__ == "__main__":
-    Light.main()
+    try:
+        Light.main()
+    except KeyboardInterrupt:
+        print("Program interrupted by user.")
 
 
 
