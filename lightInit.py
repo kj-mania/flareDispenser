@@ -4,6 +4,7 @@ class Light:
     def __init__(self):
         self.outputs = [20, 21]
         # inputs = []
+        GPIO.cleanup()
         GPIO.setmode(GPIO.BCM)
 
         for pin in self.outputs:
