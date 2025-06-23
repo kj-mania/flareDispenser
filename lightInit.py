@@ -24,6 +24,7 @@ class Light:
     
 if __name__ == "__main__":
     try:
+        print("Initializing light system...")
         Light.main()
     except KeyboardInterrupt:
         print("Program interrupted by user.")
