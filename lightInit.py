@@ -20,8 +20,11 @@ class Light:
         #     GPIO.setup(pin, GPIO.IN)
 
     def lightOutputs(self):
+        print("Lighting outputs...")
         for pin in self.outputs:
+            print(f"Turning on output on pin {pin}")
             GPIO.output(pin, GPIO.HIGH)
+            time.sleep(5)
 
     def checkAllInputs(self) -> bool:
         flaresWentOff = 0
@@ -42,7 +45,6 @@ if __name__ == "__main__":
     try:
         print("Initializing light system...")
         Light.main()
-        print("Lights are ON")
         while True:
             time.sleep(1)
     except KeyboardInterrupt:
