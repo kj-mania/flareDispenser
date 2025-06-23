@@ -2,7 +2,7 @@ import RPi.GPIO as GPIO
 
 class Light:
 
-    def __init__():
+    def __init__(self):
         outputs = [20, 21]
         # inputs = []
         GPIO.setmode(GPIO.BCM)
@@ -18,9 +18,9 @@ class Light:
         for pin in self.outputs:
             GPIO.output(pin, GPIO.HIGH)
 
-    def main():
+    def main(self):
         light = Light()
-        light.setOutputs()
+        light.setOutputs(self)
     
 if __name__ == "__main__":
     Light.main()
