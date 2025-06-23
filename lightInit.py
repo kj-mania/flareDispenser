@@ -18,7 +18,8 @@ class Light:
         for pin in self.outputs:
             GPIO.output(pin, GPIO.HIGH)
 
-    def main(self):
+    @staticmethod
+    def main():
         light = Light()
         light.setOutputs()
     
