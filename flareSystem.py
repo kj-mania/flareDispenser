@@ -20,11 +20,11 @@ class FlareSystem:
         light.activate(flareOut)
         return light.inputOn(flareToReturn)
     
-    def signalSuccess(self, success: bool, light: Light, red: int, green: int):
-        if success:
-            light.activate(green)
-        else:
-            light.activate(red)
+    # def signalSuccess(self, success: bool, light: Light, red: int, green: int):
+    #     if success:
+    #         light.activate(green)
+    #     else:
+    #         light.activate(red)
 
     
 
