@@ -27,6 +27,7 @@ def main():
             t.sleep(1)
     except KeyboardInterrupt:
         print("Program interrupted by user.")
+        Light.cleanup()
     finally:
         Light.cleanup()
 
