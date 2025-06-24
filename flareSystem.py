@@ -8,7 +8,7 @@ class FlareSystem:
         self.delay = 3
 
     def flareSuccess(self, outcomes: list[bool]) -> bool:
-        sum = 0
+        success = 0
         for outcome in outcomes:
             if outcome:
                 success += 1
@@ -18,26 +18,11 @@ class FlareSystem:
         flareOut = light.outputs[index]
         flareToReturn = light.inputs[index]
         light.activate(flareOut)
+        time.sleep(.5)
         return light.inputOn(flareToReturn)
     
-    # def signalSuccess(self, success: bool, light: Light, red: int, green: int):
-    #     if success:
-    #         light.activate(green)
-    #     else:
-    #         light.activate(red)
-
-    
-
-    
-
-    
-
-
-
-
-
-
-    
-
-
-    
+    def signalSuccess(self, success: bool, light: Light, red: int, green: int):
+        if success:
+            light.activate(green)
+        else:
+            light.activate(red)
