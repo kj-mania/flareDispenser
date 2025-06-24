@@ -2,7 +2,7 @@ from light import Light
 from flareSystem import FlareSystem
 import time as t
 
-def main():
+def run():
     outputs = [21, 20, 30, 40]
     inputs = [26, 19]
 
@@ -19,6 +19,17 @@ def main():
     allFlaresDeployed = flareSystem.flareSuccess(flareReturns)
     
     flareSystem.signalSuccess(allFlaresDeployed, light, 30, 40)
+
+
+def main():
+    try:
+        while True:
+            run()
+            t.sleep(1)
+    except KeyboardInterrupt:
+        print("Program interrupted by user.")
+    finally:
+        Light.cleanup()
 
 
 
