@@ -14,9 +14,8 @@ class Light:
             GPIO.output(pin, GPIO.LOW)
 
         for pin in self.inputs:
-            GPIO.setup(pin, GPIO.IN)
+            GPIO.setup(pin, GPIO.IN, pull_up_down=GPIO.PUD_DOWN)
 
-    
     def outputOn(pin: int) -> bool:
         return GPIO.output(pin, GPIO.HIGH)
     
@@ -25,3 +24,6 @@ class Light:
     
     def inputOn(pin: int) -> bool:
         return GPIO.input(pin)
+    
+    def cleanup():
+        GPIO.cleanup()
