@@ -29,9 +29,10 @@ def main():
         print("Program interrupted by user.")
         Light.cleanup()
     finally:
-        Light.cleanup()
+        Light.cleanup() 
 
 if __name__ == "__main__":
     main()
 
 
+#hi
