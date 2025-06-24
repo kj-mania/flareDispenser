@@ -1,4 +1,4 @@
-from gpio import Light, UIMessages
+from light import Light
 from flareSystem import flareSystem
 import time as t
 
