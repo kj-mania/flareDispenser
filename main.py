@@ -18,6 +18,7 @@ def run():
     
     allFlaresDeployed = flareSystem.flareSuccess(flareReturns)
     print(f"All flares deployed successfully: {allFlaresDeployed}")
+    print(flareReturns)
 
     # flareSystem.signalSuccess(allFlaresDeployed, light, 30, 40)
 
