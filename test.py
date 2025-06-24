@@ -30,13 +30,13 @@ class Light:
     def main():
         light = Light()
         light.lightOutputs()
+        light.checkInputs()
     
 if __name__ == "__main__":
     try:
         print("Initializing light system...")
         time.sleep(5)
         Light.main()
-        # Light().checkInputs()
         while True:
             time.sleep(1)
     except KeyboardInterrupt:
