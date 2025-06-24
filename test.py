@@ -25,6 +25,7 @@ class Light:
 if __name__ == "__main__":
     try:
         print("Initializing light system...")
+        time.sleep(5)
         Light.main()
         while True:
             time.sleep(1)
