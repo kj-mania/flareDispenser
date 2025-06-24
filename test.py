@@ -12,7 +12,7 @@ class Light:
             GPIO.output(pin, GPIO.LOW)
 
         for pin in self.inputs:
-            GPIO.setup(pin, GPIO.IN)
+            GPIO.setup(pin, GPIO.IN, pull_up_down=GPIO.PUD_DOWN)
 
     def lightOutputs(self):
         for pin in self.outputs:
