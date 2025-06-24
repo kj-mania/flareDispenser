@@ -1,5 +1,5 @@
 from light import Light
-from flareSystem import flareSystem
+from flareSystem import FlareSystem
 import time as t
 
 def main():
@@ -7,7 +7,7 @@ def main():
     inputs = [26, 19]
 
     light = Light(outputs, inputs)
-    flareSystem = flareSystem()
+    flareSystem = FlareSystem()
 
     flareReturns = []
 
