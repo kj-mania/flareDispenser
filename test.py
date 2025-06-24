@@ -4,7 +4,7 @@ import time
 class Light:
     def __init__(self):
         self.outputs = [21, 20]
-        self.inputs = [26, 19]
+        self.inputs = [19, 13]
         GPIO.setmode(GPIO.BCM)
 
         for pin in self.outputs:
