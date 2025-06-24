@@ -3,13 +3,12 @@ import time
 
 class Light:
     def __init__(self):
-        self.outputs = [21]
+        self.outputs = 21
         
         GPIO.setmode(GPIO.BCM)
 
-        for pin in self.outputs:
-            GPIO.setup(pin, GPIO.OUT)
-            GPIO.output(pin, GPIO.LOW)
+        GPIO.setup(self.outputs, GPIO.OUT)
+        GPIO.output(self.outputs, GPIO.LOW)
 
     def lightOutputs(self):
         for pin in self.outputs:
@@ -38,11 +37,15 @@ class Light:
 if __name__ == "__main__":
     try:
         print("Initializing light system...")
-        print("starting in 5 seconds...")
-        time.sleep(5) 
-        Light.main()
         while True:
-            time.sleep(1)
+            print("starting in 5 seconds...")
+            time.sleep(2) 
+            print("starting 21")
+            GPIO.output(21, GPIO.HIGH)
+            time.sleep(2)
+            print("turning off 21")
+            GPIO.output(21, GPIO.LOW)
+            time.sleep(2)
     except KeyboardInterrupt:
         print("Program interrupted by user.")
     finally:
