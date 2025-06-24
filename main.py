@@ -2,8 +2,8 @@ from light import Light
 from flareSystem import FlareSystem
 import time as t
 
-outputs = [21, 20, 16]
-inputs = [19, 13, 6]
+outputs = [21, 20, 16, 12]
+inputs = [19, 13, 6, 5]
 light = Light(outputs, inputs)
 
 def run():
