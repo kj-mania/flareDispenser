@@ -19,6 +19,7 @@ class Light:
             time.sleep(5)
             print(f"Turning off output on pin {self.outputs}")
             GPIO.output(self.outputs, GPIO.LOW)
+            time.sleep(5)
 
     def checkAllInputs(self) -> bool:
         flaresWentOff = 0
