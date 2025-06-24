@@ -16,14 +16,14 @@ class Light:
         for pin in self.inputs:
             GPIO.setup(pin, GPIO.IN, pull_up_down=GPIO.PUD_DOWN)
 
-    def activate(pin: int) -> bool:
+    def activate(self, pin: int) -> bool:
         return GPIO.output(pin, GPIO.HIGH)
     
-    def deactivate(pin: int) -> bool:
+    def deactivate(self, pin: int) -> bool:
         return GPIO.output(pin, GPIO.LOW)
     
-    def inputOn(pin: int) -> bool:
+    def inputOn(self, pin: int) -> bool:
         return GPIO.input(pin)
     
-    def cleanup():
+    def cleanup(self):
         GPIO.cleanup()
