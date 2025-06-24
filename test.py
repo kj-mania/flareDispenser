@@ -11,12 +11,14 @@ class Light:
         GPIO.output(self.outputs, GPIO.LOW)
 
     def lightOutputs(self):
-        GPIO.output(self.outputs, GPIO.LOW)
-        print("Lighting outputs...")
-        print(f"Turning on output on pin {self.outputs}")
-        GPIO.output(self.outputs, GPIO.HIGH)
-        time.sleep(5)
-        GPIO.output(self.outputs, GPIO.LOW)
+        for i in range(100):
+            GPIO.output(self.outputs, GPIO.LOW)
+            print("Lighting outputs...")
+            print(f"Turning on output on pin {self.outputs}")
+            GPIO.output(self.outputs, GPIO.HIGH)
+            time.sleep(5)
+            print(f"Turning off output on pin {self.outputs}")
+            GPIO.output(self.outputs, GPIO.LOW)
 
     def checkAllInputs(self) -> bool:
         flaresWentOff = 0
@@ -31,7 +33,6 @@ class Light:
     def main():
         light = Light()
         light.lightOutputs()
-        # light.checkAllInputs()
     
 if __name__ == "__main__":
     try:
