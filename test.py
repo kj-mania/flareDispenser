@@ -22,9 +22,10 @@ class Light:
     def checkInputs(self):
         for pin in self.inputs:
             if GPIO.input(pin):
-                print(f"Input on pin {pin} is HIGH, flare went off!")
+                print(GPIO.input(pin))
+                print(f"Input on pin {pin} is HIGH")
             else:
-                print(f"Input on pin {pin} is LOW, flare did not go off.")
+                print(f"Input on pin {pin} is LOW")
 
     @staticmethod
     def main():
@@ -35,7 +36,7 @@ class Light:
 if __name__ == "__main__":
     try:
         print("Initializing light system...")
-        time.sleep(5)
+        time.sleep(2)
         Light.main()
         while True:
             time.sleep(1)
