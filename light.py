@@ -16,10 +16,10 @@ class Light:
         for pin in self.inputs:
             GPIO.setup(pin, GPIO.IN, pull_up_down=GPIO.PUD_DOWN)
 
-    def outputOn(pin: int) -> bool:
+    def activate(pin: int) -> bool:
         return GPIO.output(pin, GPIO.HIGH)
     
-    def outputOff(pin: int) -> bool:
+    def deactivate(pin: int) -> bool:
         return GPIO.output(pin, GPIO.LOW)
     
     def inputOn(pin: int) -> bool:
