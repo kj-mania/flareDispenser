@@ -12,14 +12,9 @@ class Light:
             GPIO.output(pin, GPIO.LOW)
 
     def lightOutputs(self):
-        print("Lighting outputs 21")
+        print("Lighting outputs 21 and 20")
         GPIO.output(21, GPIO.HIGH)
-        time.sleep(5)
-        GPIO.output(21, GPIO.LOW)
-        print("Lighting outputs 20")
         GPIO.output(20, GPIO.HIGH)
-        time.sleep(5)
-        GPIO.output(20, GPIO.LOW)
 
     @staticmethod
     def main():
