@@ -17,8 +17,8 @@ class FlareSystem:
     def fireFlare(self, index: int, light: Light) -> bool:
         flareOut = light.outputs[index]
         flareToReturn = light.inputs[index]
-        light.outputOn(flareOut)
-        return light.inputConfirm(flareToReturn)
+        light.activate(flareOut)
+        return light.inputOn(flareToReturn)
     
     def signalSuccess(self, success: bool, light: Light, red: int, green: int):
         if success:
