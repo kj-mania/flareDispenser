@@ -3,32 +3,19 @@ import time
 
 class Light:
     def __init__(self):
-        self.outputs = 21
+        self.outputs = [21, 20]
         
         GPIO.setmode(GPIO.BCM)
 
-        GPIO.setup(self.outputs, GPIO.OUT)
-        GPIO.output(self.outputs, GPIO.LOW)
+        for pin in self.outputs:
+            GPIO.setup(pin, GPIO.OUT)
+            GPIO.output(pin, GPIO.LOW)
 
     def lightOutputs(self):
-        for i in range(100):
-            GPIO.output(self.outputs, GPIO.LOW)
-            print("Lighting outputs...")
-            print(f"Turning on output on pin {self.outputs}")
-            GPIO.output(self.outputs, GPIO.HIGH)
+        for pin in self.outputs:
+            print(f"Turning on output on pin {pin}")
+            GPIO.output(pin, GPIO.HIGH)
             time.sleep(5)
-            print(f"Turning off output on pin {self.outputs}")
-            GPIO.output(self.outputs, GPIO.LOW)
-            time.sleep(5)
-
-    def checkAllInputs(self) -> bool:
-        flaresWentOff = 0
-        for pin in self.inputs:
-            print(f"Checking input on pin {pin}")
-            if GPIO.input(pin) == GPIO.HIGH:
-                flaresWentOff += 1
-                print(f"Input on pin {pin} is HIGH, flare went off!")
-        return flaresWentOff == len(self.inputs)
 
     @staticmethod
     def main():
