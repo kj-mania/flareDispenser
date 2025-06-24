@@ -12,10 +12,11 @@ class Light:
             GPIO.output(pin, GPIO.LOW)
 
     def lightOutputs(self):
-        for pin in self.outputs:
-            print(f"Turning on output on pin {pin}")
-            GPIO.output(pin, GPIO.HIGH)
-            time.sleep(5)
+        while True:
+            for pin in self.outputs:
+                print(f"Turning on output on pin {pin}")
+                GPIO.output(pin, GPIO.HIGH)
+                time.sleep(5)
 
     @staticmethod
     def main():
