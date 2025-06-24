@@ -1,6 +1,6 @@
 import time
 from typing import List
-from gpio import Light
+from light import Light
 
 class FlareSystem:
 
