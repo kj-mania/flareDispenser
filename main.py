@@ -28,7 +28,6 @@ def main():
     try:
         while True:
             run()
-            t.sleep(1)
     except KeyboardInterrupt:
         print("Program interrupted by user.")
     finally:
