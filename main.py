@@ -6,7 +6,7 @@ outputs = [21, 20, 16, 12, 7, 25, 24]
 inputs = [19, 13, 6, 5, 9, 27, 18]
 red = 17
 blue = 4
-light = Light(outputs, inputs)
+light = Light(outputs, inputs, red, blue)
 
 def run():
     flareSystem = FlareSystem()
