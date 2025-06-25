@@ -27,7 +27,7 @@ class Order:
     
     def getOrder(self):
         newOrder = []
-        for i in range (len(self.order)):
+        for i in range (len(self.dicts)):
             x = input("Input order one at a time:")
             newOrder.append(int(x))
             
