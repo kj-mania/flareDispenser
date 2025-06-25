@@ -22,12 +22,12 @@ def run():
     print(flareReturns)
     flareSystem.signalSuccess(allFlaresDeployed, light, red, blue)
 
-    return light
-
 def main():
     try:
         while True:
             run()
+            t.sleep(1)
+            break
     except KeyboardInterrupt:
         print("Program interrupted by user.")
     finally:
