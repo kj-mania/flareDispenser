@@ -1,6 +1,9 @@
 class Order:
     def __init__(self):
         self.order = [3, 0, 1, 2, 4, 5, 6]
+        
+        self.red = 17
+        self.blue = 15
 
         self.dicts = {
                 0: [21, 19],
@@ -18,5 +21,5 @@ class Order:
         for num in self.order:
             outputs.append(self.dicts[num][0])
             inputs.append(self.dicts[num][1])
-
-        return outputs, inputs
+            
+        return outputs, inputs, self.red, self.blue
