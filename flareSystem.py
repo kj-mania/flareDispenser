@@ -25,7 +25,10 @@ class FlareSystem:
         if success:
             print("Activating blue light to signal success.")
             light.activate(blue)
+            time.sleep(1)
             light.deactivate(red)
+            light.activate(blue)
+            time.sleep(1)
         else:
             print("Activating red light to signal failure.")
             light.activate(red)
