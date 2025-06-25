@@ -32,5 +32,6 @@ class Light:
     def inputOn(self, pin: int) -> bool:
         return GPIO.input(pin)
     
+    @staticmethod
     def cleanup(self):
         GPIO.cleanup()

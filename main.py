@@ -1,14 +1,22 @@
 from light import Light
 from flareSystem import FlareSystem
+from input import Input
+from RPi import GPIO
 import time as t
 
-outputs = [21, 20, 16, 12, 7, 25, 24]
-inputs = [19, 13, 6, 5, 9, 27, 18]
-red = 17
-blue = 15
-light = Light(outputs, inputs, red, blue)
+# outputs = [21, 20, 16, 12, 7, 25, 24]
+# inputs = [19, 13, 6, 5, 9, 27, 18]
+
+
+# light = Light(outputs, inputs, red, blue)
+
+
 
 def run():
+    red = 17
+    blue = 15
+    outputs, inputs = input.entryInput()
+    light = Light(outputs, inputs, red, blue)
     flareSystem = FlareSystem()
 
     flareReturns = []
@@ -23,6 +31,8 @@ def run():
     print(flareReturns)
     flareSystem.signalSuccess(allFlaresDeployed, light, red, blue)
 
+    return light
+
 def main():
     try:
         while True:
@@ -31,7 +41,7 @@ def main():
     except KeyboardInterrupt:
         print("Program interrupted by user.")
     finally:
-        light.cleanup() 
+        GPIO.cleanup()
 
 if __name__ == "__main__":
     main()
