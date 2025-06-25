@@ -4,6 +4,8 @@ import time as t
 
 outputs = [21, 20, 16, 12, 7, 25, 24]
 inputs = [19, 13, 6, 5, 9, 27, 18]
+red = 17
+blue = 4
 light = Light(outputs, inputs)
 
 def run():
@@ -19,8 +21,7 @@ def run():
     allFlaresDeployed = flareSystem.flareSuccess(flareReturns)
     print(f"All flares deployed successfully: {allFlaresDeployed}")
     print(flareReturns)
-
-    # flareSystem.signalSuccess(allFlaresDeployed, light, 30, 40)
+    flareSystem.signalSuccess(allFlaresDeployed, light, red, blue)
 
 def main():
     try:
