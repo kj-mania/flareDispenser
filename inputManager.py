@@ -1,10 +1,7 @@
-    
-
-
-class Input:
+class Order:
     def __init__(self):
         self.order = [0, 1, 2, 3, 4, 5, 6]
-        
+
         self.dicts = {
                 0: [21, 19],
                 1: [20, 13],
@@ -15,7 +12,6 @@ class Input:
                 6: [24, 18]
         }
 
-    @staticmethod
     def entryInput(self):
         outputs = []
         inputs = []

@@ -1,6 +1,6 @@
 from light import Light
 from flareSystem import FlareSystem
-from input import Input
+import inputManager as order
 from RPi import GPIO
 import time as t
 
@@ -15,7 +15,7 @@ import time as t
 def run():
     red = 17
     blue = 15
-    outputs, inputs = input.entryInput()
+    outputs, inputs = order.entryInput()
     light = Light(outputs, inputs, red, blue)
     flareSystem = FlareSystem()
 
