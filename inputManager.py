@@ -1,6 +1,6 @@
 class Order:
     def __init__(self):
-        self.order = [0, 1, 2, 3, 4, 5, 6]
+        self.order = [3, 0, 1, 2, 4, 5, 6]
 
         self.dicts = {
                 0: [21, 19],
