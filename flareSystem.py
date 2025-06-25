@@ -21,8 +21,10 @@ class FlareSystem:
         time.sleep(.5)
         return light.inputOn(flareToReturn)
     
-    def signalSuccess(self, success: bool, light: Light, red: int, green: int):
+    def signalSuccess(self, success: bool, light: Light, red: int, blue: int):
         if success:
-            light.activate(green)
+            print("Activating blue light to signal success.")
+            light.activate(blue)
         else:
+            print("Activating red light to signal failure.")
             light.activate(red)
