@@ -15,10 +15,6 @@ class Light:
         for pin in self.inputs:
             GPIO.setup(pin, GPIO.IN)
 
-
-        # for pin in inputs:
-        #     GPIO.setup(pin, GPIO.IN)
-
     def lightOutputs(self):
         for pin in self.outputs:
             GPIO.output(pin, GPIO.LOW)

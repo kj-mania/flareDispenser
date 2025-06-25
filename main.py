@@ -4,19 +4,9 @@ from inputManager import Order
 from RPi import GPIO
 import time as t
 
-# outputs = [21, 20, 16, 12, 7, 25, 24]
-# inputs = [19, 13, 6, 5, 9, 27, 18]
-
-
-# light = Light(outputs, inputs, red, blue)
-
-
-
 def run():
-    red = 17
-    blue = 15
     order = Order()
-    outputs, inputs = order.entryInput()
+    outputs, inputs, red, blue = order.entryInput()
     light = Light(outputs, inputs, red, blue)
     flareSystem = FlareSystem()
 
