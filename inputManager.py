@@ -39,7 +39,7 @@ class Order:
             if int(x) == 8:
                 for i in range(7):
                     newOrder = [0, 1, 2, 3, 4, 5, 6]
-                    math.random.shuffle(newOrder)
+                    math.shuffle(newOrder)
                     break
             newOrder.append(int(x))
             
