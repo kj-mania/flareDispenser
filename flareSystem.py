@@ -22,11 +22,9 @@ class FlareSystem:
         return light.inputOn(flareToReturn)
     
     def printFailure(self, failures: list[int]):
-        x = 0
-        for items in failures:
-            if items == 0:
-                print(f"Flare {failures.index(x)} failed to deploy")
-                x += 1
+        for idx, item in enumerate(failures):
+            if item == 0:
+                print(f"Flare {idx} failed to deploy")
     
     def signalSuccess(self, success: bool, light: Light, red: int, blue: int):
         if success:
