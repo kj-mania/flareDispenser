@@ -1,4 +1,4 @@
-import Math as math
+import math
 
 class Order:
     def __init__(self):
