@@ -32,9 +32,9 @@ class FlareSystem:
             light.deactivate(red)
             for _ in range(5):
                 light.activate(blue)
-                time.sleep(.2)
+                time.sleep(.1)
                 light.deactivate(blue)
-                time.sleep(.2)
+                time.sleep(.1)
         else:
             print("Activating red light to signal failure.")
             light.activate(red)
