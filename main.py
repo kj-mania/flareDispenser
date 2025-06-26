@@ -16,7 +16,7 @@ def run():
     for i in range(len(inputs)):
         outcome = flareSystem.fireFlare(i, light)
         flareReturns.append(outcome)
-        t.sleep(delay)
+        t.sleep(flareSystem.delay)
     
     allFlaresDeployed = flareSystem.flareSuccess(flareReturns)
     print(f"All flares deployed successfully: {allFlaresDeployed}")

@@ -5,7 +5,7 @@ from light import Light
 class FlareSystem:
 
     def __init__(self):
-        self.delay = 3
+        self.delay = 1
 
     def flareSuccess(self, outcomes: list[bool]) -> bool:
         success = 0
