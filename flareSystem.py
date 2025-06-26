@@ -21,10 +21,10 @@ class FlareSystem:
         time.sleep(.5)
         return light.inputOn(flareToReturn)
     
-    def printFailure(self, failures: list[bool]):
+    def printFailure(self, failures: list[bool], order: list[int]):
         for idx, success in enumerate(failures):
             if not success:
-                print(f"Flare {idx} failed to deploy")
+                print(f"Flare {order[idx]} failed to deploy")
     
     def signalSuccess(self, success: bool, light: Light, red: int, blue: int):
         if success:
