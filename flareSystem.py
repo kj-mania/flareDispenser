@@ -30,7 +30,7 @@ class FlareSystem:
         if success:
             print("Activating blue light to signal success.")
             light.deactivate(red)
-            for _ in range(5):
+            for _ in range(20):
                 light.activate(blue)
                 time.sleep(.1)
                 light.deactivate(blue)
