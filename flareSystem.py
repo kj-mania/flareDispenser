@@ -22,7 +22,7 @@ class FlareSystem:
         return light.inputOn(flareToReturn)
     
     def printFailure(self, failures: list[int]):
-        for idx, item in enumerate(failures):
+        for idx, item in reversed(list(enumerate(failures))):
             if item == 0:
                 print(f"Flare {idx} failed to deploy")
     
