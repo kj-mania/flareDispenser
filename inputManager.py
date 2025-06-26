@@ -1,3 +1,5 @@
+import Math as math
+
 class Order:
     def __init__(self):
 
@@ -34,6 +36,11 @@ class Order:
             if int(x) == 7:
                 newOrder = [0, 1, 2, 3, 4, 5, 6]
                 break
+            if int(x) == 8:
+                for i in range(7):
+                    newOrder = [0, 1, 2, 3, 4, 5, 6]
+                    math.random.shuffle(newOrder)
+                    break
             newOrder.append(int(x))
             
         return newOrder

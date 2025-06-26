@@ -24,7 +24,7 @@ class FlareSystem:
     def printFailure(self, failures: list[int]):
         for i in failures:
             if i == 0:
-                print(f"Flare {failures.index(i)} failed to deploy")
+                print(f"Flare {i} failed to deploy")
     
     def signalSuccess(self, success: bool, light: Light, red: int, blue: int):
         if success:
