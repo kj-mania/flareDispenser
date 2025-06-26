@@ -29,13 +29,14 @@ class FlareSystem:
     def signalSuccess(self, success: bool, light: Light, red: int, blue: int):
         if success:
             print("Activating blue light to signal success.")
+            light.activate(blue)
             light.deactivate(red)
-            for _ in range(20):
-                light.activate(blue)
-                time.sleep(.1)
-                light.deactivate(blue)
-                time.sleep(.1)
+
         else:
             print("Activating red light to signal failure.")
-            light.activate(red)
             light.deactivate(blue)
+            for _ in range(20):
+                light.activate(red)
+                time.sleep(.1)
+                light.deactivate(red)
+                time.sleep(.1)
