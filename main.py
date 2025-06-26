@@ -5,6 +5,7 @@ from RPi import GPIO
 import time as t
 
 def run():
+    delay = 3
     order = Order()
     outputs, inputs, red, blue = order.entryInput()
     light = Light(outputs, inputs, red, blue)
@@ -15,7 +16,7 @@ def run():
     for i in range(len(inputs)):
         outcome = flareSystem.fireFlare(i, light)
         flareReturns.append(outcome)
-        t.sleep(1)
+        t.sleep(delay)
     
     allFlaresDeployed = flareSystem.flareSuccess(flareReturns)
     print(f"All flares deployed successfully: {allFlaresDeployed}")
