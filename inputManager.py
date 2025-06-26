@@ -16,6 +16,8 @@ class Order:
                 6: [24, 18]
         }
 
+        self.enterCode = 7
+
     def entryInput(self):
         outputs = []
         inputs = []
@@ -28,6 +30,9 @@ class Order:
     def getOrder(self):
         newOrder = []
         for i in range (7):
+            if i == 7:
+                newOrder = [0, 1, 2, 3, 4, 5, 6]
+                break
             x = input("Input order one at a time:")
             newOrder.append(int(x))
             
