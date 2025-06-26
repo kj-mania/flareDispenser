@@ -31,7 +31,7 @@ class Order:
         newOrder = []
         for i in range (7):
             x = input("Input order one at a time:")
-            if x == 7:
+            if int(x) == 7:
                 newOrder = [0, 1, 2, 3, 4, 5, 6]
                 break
             newOrder.append(int(x))
