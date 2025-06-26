@@ -20,6 +20,8 @@ def run():
     allFlaresDeployed = flareSystem.flareSuccess(flareReturns)
     print(f"All flares deployed successfully: {allFlaresDeployed}")
     print(flareReturns)
+    flareSystem.printFailure(flareReturns)
+    
     flareSystem.signalSuccess(allFlaresDeployed, light, red, blue)
 
 def main():
@@ -35,6 +37,3 @@ def main():
 
 if __name__ == "__main__":
     main()
-
-
-#hi

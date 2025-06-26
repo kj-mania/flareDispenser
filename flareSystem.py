@@ -21,20 +21,20 @@ class FlareSystem:
         time.sleep(.5)
         return light.inputOn(flareToReturn)
     
+    def printFailure(self, failures: list[int]):
+        for i in failures:
+            if i == 0:
+                print(f"Flare {i + 1} failed to deploy")
+    
     def signalSuccess(self, success: bool, light: Light, red: int, blue: int):
         if success:
             print("Activating blue light to signal success.")
             light.deactivate(red)
-
-            light.activate(blue)
-            time.sleep(1)
-            light.deactivate(blue)
-            time.sleep(1)
-
-            light.activate(blue)
-            time.sleep(1)
-            light.deactivate(blue)
-            time.sleep(1)
+            for _ in range(2):
+                light.activate(blue)
+                time.sleep(1)
+                light.deactivate(blue)
+                time.sleep(1)
         else:
             print("Activating red light to signal failure.")
             light.activate(red)
